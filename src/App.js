@@ -18,6 +18,13 @@ import SignIn from './SignIn';
 import SignUpPage from './SignUpPage';
 import Cart from './Cart';
 import { CartProvider } from './CartContext';
+import SideNavBar from './SideNavBar';
+import Cards from './Cards';
+import Label from './Label';
+import backgroundImage from './woman-smiling.png';
+import Styling from "./Styling";
+import Intro from "./Intro";
+
 
 function Section({ children }) {
   return (
@@ -31,45 +38,50 @@ function App() {
   return (
     <CartProvider>
       <Router>
+        
         <div className="App">
-          <Routes>
-            <Route path="/" element={
-              <React.Fragment>
-                <FadeInWrapper>
-                  <Section><Home /></Section>
-                </FadeInWrapper>
-                <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
-                  <FadeInWrapper>
-                    <Section><ContentComponent /></Section>
-                  </FadeInWrapper>
-                  <Section><CardComponent /></Section>
-                  <Section><CourseCategories /></Section>
-                </div>
-                <Section>
-                  <CourseImage 
-                    text="Become an Instructor today"
-                    bodyFontSize='80px'
-                    headerText='BLOG'
-                    backgroundImg={Teacher}
-                  />
-                </Section>
-                <div className="wrapper" style={{ maxWidth: 1200, margin: 'auto' }}>
-                  <Section><TextNearTop /></Section>
-                  <Section><Pros /></Section>
-                </div>
-                <Section><Footer /></Section>
-              </React.Fragment>
-            } />
-            <Route path="/CoursePage" element={<CoursePage />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUpPage />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/course/:courseId" element={<CourseLanding />} />
-          </Routes>
+      
+          
+          <div className="left-sidebar">
+            {/* Your sidebar content */}
+            <FadeInWrapper>
+              <Section>
+                
+                <SideNavBar />
+              </Section>
+            </FadeInWrapper>
+          </div>
+          <div className="main-content">
+          <div style={{position: 'sticky',top: '0px', fontSize: '60px', zIndex: 100}}>
+  <div className="navbar-content-wrapper">
+    <div>hi</div>
+    <div>hi</div>
+    </div>
+</div>
+
+            {/* Your main content */}
+            <Routes>
+  <Route path="/" />
+  <Route path="/Intro" element={<Intro />} />
+  <Route path="/Styling" element={<Styling />} />
+  {/* other routes */}
+</Routes>
+                <React.Fragment>
+      {/* Example main content */}
+      
+      {/* Repeat for additional content as needed */}
+    </React.Fragment>
+            
+
+
+
+          </div>
+          
         </div>
       </Router>
     </CartProvider>
   );
 }
+
 
 export default App;

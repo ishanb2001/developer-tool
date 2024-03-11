@@ -1,154 +1,170 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 
-html {
-  scroll-behavior: smooth;
-  font-family: 'Manrope', sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope';
 }
+
+
+.modern-button {
+  width: 100%;
+  border: 1px solid #2e2e32;
+  padding: 20px;
+  background-color: #202127;
+  border-radius: 50px; 
+  color: white;
+  font-size: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  cursor: pointer;
+  outline: none;
+}
+
+.modern-button:hover, .modern-button:focus {
+  background-color: #2e2e32; 
+  outline: none;
+}
+
+
+body, html {
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Manrope';
+}
+
 
 .App {
-  scroll-snap-type: y mandatory; /* Ensures the container will "snap" along the y-axis */
-  overflow-y: scroll; /* Ensure that your container can scroll */
-  height: 100vh; /* Full viewport height */
+  display: flex;
+  min-height: 100vh; 
+  max-width: 1200px;
+  margin: auto; 
 }
 
-.section {
-  min-height: 0vh; /* This ensures each section takes at least the full height of the viewport */
+.left-sidebar {
+  width: 300px; 
+  height: 100vh;
+  overflow-y: auto; 
+  position: sticky;
+  top: 0;
+  
+  
 }
 
-/* App.css */
-.card {
-  opacity: 0;
-  transition: opacity 1s ease-out;
-  align-items: flex-start;
+.course-page-content {
+  margin: 30px;
+  margin-right: 0px;
 }
 
-.card {
-  /* other styles... */
-  position: relative;
-  overflow: hidden;
+.main-content {
+  margin-top: 0px; 
 }
 
-.user-menu {
-  position: relative;
-}
-
-.user-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.user-dropdown button {
-  display: block;
-  background: none;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-}
-
-
-
-.card.fade-in {
-  opacity: 1;
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-body {
-  background-color: white;
-  font-family: 'Manrope', sans-serif;
-  color: black;
-  opacity: 1; /* Start with body being transparent */
-  overflow-x: hidden; /* Avoid any potential horizontal scroll */
-  transition: opacity 0.5s;
+.home-content {
+  margin: 20px; 
+  max-width: 100%; 
 }
 
 .body {
-  font-Size: 15px;
-  line-Height: 1.5;
-  color: #000000;
-  font-Weight: 500;
-  margin-Top:10px;
-  line-Height: 1.4;
-  letter-spacing: 0.02em;
+ color: grey;
+ line-height: 28px;
+ font-family: 'Manrope';
+ font-weight: 500;
 }
 
-.fadeIn {
-  animation-name: fadeInEffect;
-  animation-timing-function: ease-in-out;
-  animation-duration: 0.5s;
+h1 {
+  font-weight: 800;
+  font-size: 50px;
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
 }
 
-@keyframes fadeInEffect {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
 }
 
 
-
-
-.content-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1; /* Put it behind the actual content */
-  
-  background-image: 
-      repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 2px, transparent 1px, transparent 29px),
-      repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 2px, transparent 1px, transparent 29px);
-  
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 80%);
-}
-
-.content-container {
-  position: relative;
-  /* other styles... */
-}
-
-.course-body-title {
-  font-size: 14px;
-  font-weight: 700;
+.main-content {
+  flex-grow: 1; 
+  max-width: calc(100% - 300px); 
+  overflow-x: hidden; 
   
 }
 
-.course-body {
-  font-size: 14px;
+
+.side-navbar ul {
+  list-style-type: none;
+  padding: 20px 0;
 }
 
-.video-background {
-  opacity: 0; /* Make video transparent by default */
-  transition: opacity 0.5s ease-in-out; /* Transition effect */
+.side-navbar ul li a {
+  text-decoration: none;
+  color: rgb(190, 190, 190);
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease; 
+  border-radius: 70px;
+  font-weight: 600;
 }
 
-.card:hover .video-background {
-  opacity: 1; /* Make video visible on hover */
+.sidebar-subheader {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease; 
+  border-radius: 70px;
+  font-weight: 900;
+}
+
+.side-navbar ul li a:hover, .side-navbar ul li a.active-link {
+  background-color: #292929; 
+  color: rgb(190, 190, 190); 
+  border-radius: 70px;
+}
+
+.side-navbar ul li a:focus, .side-navbar ul li a.active-link {
+  background-color: #292929; 
+  color: rgb(255, 255, 255); 
+  border-radius: 70px;
 }
 
 
+.card {
+  background-color: #333; 
+  color: white; 
+  margin-bottom: 20px; 
+  padding: 20px; 
+  border-radius: 8px; 
+}
 
+.label {
+  display: inline-block;
+  background-color: #FFD700; 
+  color: black; 
+  padding: 5px 10px;
+  border-radius: 4px; 
+  margin-bottom: 10px; 
+}
 
+.fade-in-wrapper {
+  animation: fadeIn 1s ease-out;
+}
 
-
+.navbar-content-wrapper {
+ display: flex;
+ justify-content: space-between;
+ padding-left: 40px;
+ padding-right: 40px;
+}
 
 .navbar {
   display: flex;
@@ -156,872 +172,102 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 1em 2em;
-  background-color: white; /* Add black background */
+  background-color: #161618; 
   margin-bottom: 10px;
-  position: fixed;  /* Make the navbar fixed */
-    top: 0;           /* Position it at the top of the viewport */
-    left: 0;          /* Align it to the left */
-    right: 0;         /* Ensure it stretches across the entire viewport width */
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for some depth */
+  position: fixed;  
+    top: 0;           
+    left: 0;          
+    right: 0;         
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     z-index: 1000;
-    width: 100%; /* Ensures the navbar takes up the full viewport width */
-    border: 1px solid rgb(239, 239, 239);
+    width: 100%; 
+    
 }
 
+
+.rounded {
+  background-color: black; 
+  border: 1px solid grey; 
+  color: white; 
+  max-height: 100%; 
+  overflow: visible; 
+  white-space: pre-wrap; 
+  word-break: break-word; 
+  font-size: 13px; 
+  resize: none; 
+  border-radius: 30px;
+  padding: 30px;
+}
+
+
 .navbar-content {
-  max-width: 1300px;  /* Adjust to the desired max-width */
-  display: flex;      /* Line up all items horizontally */
+  max-width: 1300px;  
+  display: flex;      
   margin: auto;
   width: 100%;
 }
 
-body, .main-content {
-  padding-top: 60px;  /* Adjust based on the height of your navbar */
-}
-
-.search-container, .menu {
-  transition: all 0.3s ease;
-}
-
-
-.logo {
-  width: 100px;
-}
-
-.search-container {
-  flex: 1;
-}
-
-.search-input {
-  width: 50%;
-  transition: width 0.3s ease-in-out; /* This line makes the width change smooth */
-}
-
-.search-input:focus {
-  width: 70%;
-  outline: none; /* Optionally remove the default browser outline on focus */
-}
-
-
-
-
-
-
-.menu-button {
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 50px; /* Adjust rounded corners */
-  border: 1px solid white; /* Add white border */
-  background-color: transparent; /* Remove background */
-  cursor: pointer;
-  color: black; /* Set text color to white */
-  transition: 0.3s; /* Add transition for smooth hover effect */
-  font-size: 1rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-
-}
-
-.benifits {
-  border: 1px solid #e2e2e2;
-}
-
-/* All menu buttons by default will have a hover effect with a sliding underline */
-.menu-button {
-  position: relative; /* Required to properly position the pseudo-element */
-  transition: all 0.3s; /* Ensures that all state changes animate at the same speed */
-}
-
-.menu-button:hover:not(:last-child)::before {
-  width: 100%; /* On hover, the width of the underline expands to the full width */
-}
-
-.menu-button:not(:last-child)::before {
-  content: ''; /* A pseudo-element */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0; /* Initially, the underline is not visible */
-  height: 2px;
-  background-color: black; /* You can set this to the desired underline color */
-  transition: width 0.3s; /* This will animate the underline width */
-}
-
-/* The last menu button will have a border */
-.menu-button:last-child {
-  color: black;
-  font-weight: 700;
-  background-color: rgb(109, 55, 255);
-}
-
-
-.menu-button:hover {
-  color: black; /* Set text color to black on hover */
-}
-
-.menu-toggle {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 15px;
-}
-
-.search-toggle {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 15px;
-  margin-left: 10px;
-}
-
-
-
-
-
 .navbar {
-    width: 100%;
-    /* ... other navbar styles ... */
-}
-
-.navbar-content {
-    width: 100%; /* This ensures the content takes up the entire width of the navbar */
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    /* remove or reduce the padding if it's too much */
-    padding: 0 10px;
-}
-
-.menu-toggle, .search-toggle {
-    margin: 0; /* Remove any default margin */
-}
-
-.right-container {
-    display: flex;
-    align-items: center;
-}
-
-.search-container {
-    margin-right: 10px; /* Optional spacing between search and search button */
-}
-
-/* ... other styles ... */
-
-
-
-.search-input {
-  border: 2px solid black;
-  background: none;
-  color: white;
-  padding: 15px 15px;
-  border-radius: 10px;
-}
-
-.search-input:focus {
-  border: 2px solid #6d37ff;
-}
-
-.content-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 30px;
-  flex-wrap: wrap;
-}
-
-.text-button-container {
-  flex: 1 ;
-  margin-right: 10px;
-    border-Radius: 30px; /* This gives the container rounded corners */
-    position: relative; /* This will be useful for positioning the "BENIFITS" text */
-}
-
-
-.button-container {
-  display: flex;
-  gap: 10px;
-}
-
-.menu {
-  display: none;
-}
-
-.menu.open {
-  display: block;
-}
-
-.search-container {
-  display: none;
-  flex: 1;
-}
-
-.search-container.open {
-  display: block;
-}
-
-.search-toggle {
-  display: none;
-}
-
-.search-toggle {
-  display: inline-block;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.right-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 1;
-}
-
-.box-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.box {
-  flex: 1;
-  background-color: #f2f2f2;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-}
-
-.box h2 {
-  margin-top: 0;
-}
-
-.box-container {
-  display: flex;
-  padding: 20px;
-}
-
-.box {
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.box:last-child {
-  margin-bottom: 0;
-}
-
-.main-box {
-  flex: 1.5;
-  margin-right: 20px;
-}
-
-.side-boxes {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.side-boxes .box {
-  margin-right: 0;
-  margin-bottom: 20px;
-}
-
-.side-boxes .box:last-child {
-  margin-bottom: 0;
-}
-
-input:focus {
-  outline: none;
-  color: black;
-}
-
-
-
-
-
-.content-button {
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.card-comp {
   width: 100%;
-  border-radius: 30px;
-}
-
-.card-container {
-  flex: 0.5 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.content-container2 {
-  display: flex;
-  width: 100%; /* take full width */
-  margin-top: 70px;
-}
-
-.card-container2 {
-  display: flex;
-  width: 100%; /* take full width */
-  gap: 20px; 
-  flex-direction: row-reverse;
-}
-
-.column-layout {
-  display: flex;
-  flex-direction: column; 
-  gap: 20px;
-  flex-grow: 1; /* This allows the column-layout div to grow and take up available space */
-}
-
-
-
-.card-container-trending {
-  padding: 0px 0px 0px 0px;
-  flex: 0.5 1;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: flex-start;
-  padding-bottom: 30px;
-}
-
-.card1 {
-  padding: 20px;
-  border-radius: 30px;
-  font-size: 20px;
-}
-
-.card2 {
-  padding: 20px;
-  border-radius: 30px;
-  font-size: 20px;
-  color: black;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  color: black;
-  justify-content: space-between;
-  transition: transform 0.3s ease-in-out; /* Adds smoothness to the scaling effect */
-  /*box-shadow: 0 0 50px #ccc;*/
-}
-
-.categories-container {
-  position: relative;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;  
-  left: 0;   
-  background-color: white;
-  border: 1px solid #ccc;
-  z-index: 100;
-  transition: all 0.3s ease-out;
-  opacity: 0;
-  transform: translateY(-10px);
-  width: 100%;  
-}
-
-.dropdown.open {
-  display: block;
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.menu-button {
-  display: block;
-  font-family: 'Manrope', sans-serif;
-  font-size: 14px;
-  /* ... any other styles ... */
-}
-
-.course-info {
-  flex-direction: column;
-  display: flex;
-  flex-Direction: row;
-}
-
-.courses-rows {
-  justify-content: flex-start;
-}
-
-
-.card:hover {
-  transition: transform 0.3s ease-in-out; /* Adds smoothness to the scaling effect */
-  transform: scale(1.03); /* Scales the card up by 5% on hover */
-}
-
-.course-img {
-  border-radius: 12px 0px 0px;
-}
-
-/* CourseCategories.css */
-
-.header {
-  text-align: left;
-  font-Weight:900 ;
-  font-Size: 15px; 
-  color:#635bff;
-  border-radius: 40px;
-}
-
-.line {
-  width: 100%;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.button-container-filter {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.button { /* Blue */
-  border-radius: 30px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-family: 'Manrope', sans-serif;
-}
-
-.button2 { /* Blue */
-  border-radius: 30px;
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  /* Removed the display: flex; */
-}
-
-
-/* CourseCategories.css */
-
-
-.line {
-  width: 100%;
-}
-
-.button-container-filter {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 30px;
-  justify-content: flex-start;
-}
-
-.button-f {
-  border-radius: 50px;
-  border: 1px solid black;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: bolder;
-  margin: 4px 2px;
-  cursor: pointer;
-  color: black;
-  background-color: white;
-  font-family: 'SF Pro Display', sans-serif;  
-  transition: background-color 0.3s ease, color 0.3s ease; /* Optional: add transition for a smooth color change */
-}
-
-.button-big {
-  padding: 11px;
-  border: 1px solid #e2e2e2;
-  background-color: white;
-  color: black;
-  font-size: 14px;
-  font-family: 'SF Pro Display', sans-serif;  
-  border-radius: 50px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Soft transition */
-}
-
-.button-big:hover {
-  background-color: black;
-  color: white;
-}
-
-.button-big-s {
-  padding: 15px;
-  border: 2px solid #635bff;
-  background-color: #635bff;
-  color: white;
-  font-size: 16px;
-  font-family: 'Manrope', sans-serif; 
-  border-radius: 10px;
-  font-weight: 800;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Soft transition */
-}
-
-.button-big-s:hover {
-  background-color: #dddbff;
-  color: #635bff;
-}
-
-.button-big-cta {
-  padding: 15px;
-  border: 2px solid black;
-  background-color: black;
-  color: white;
-  font-size: 16px;
-  font-family: 'SF Pro Display', sans-serif;  
-  border-radius: 10px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Soft transition */
-}
-
-.button-big-cta:hover {
-  background-color: transparent;
-  color: black;
-  border: 2px solid black;
-}
-
-.button-big-b {
-  padding: 15px;
-  border: 2px solid #000000;
-  background-color: #000000;
-  color: white;
-  font-size: 16px;
-  font-family: 'SF Pro Display', sans-serif;  
-  border-radius: 10px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Soft transition */
-}
-
-.button-big-b:hover {
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  background-color: #ffffff00;
-}
-
-
-.button-f:hover {
-  background-color: black; /* Change to whatever color you want on hover */
-  color: #ddd; /* Change the text color on hover if necessary */
-}
-
-.button-f2:hover {
-  background-color: black; /* Change to whatever color you want on hover */
-  color: #ddd; /* Change the text color on hover if necessary */
-}
-
-.button-f2 {
-  border-radius: 50px;
-  border: 1px solid black;
-  padding: 8px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'SF Pro Display', sans-serif;
-  font-size: 25px;
-  margin: 4px 2px;
-  cursor: pointer;
-  color: black; 
-  transition: background-color 0.3s ease, color 0.3s ease; /* Optional: add transition for a smooth color change */
   
 }
 
-/* TrendingCourses.css */
-
-.header-container {
+.nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
+  height: 60px;
+  width: 100%; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+  background-color: #161618; 
+  
 }
 
-.header {
-  text-Align: 'left';
-  font-Weight: '900';
-  font-Size: '15px';
-  color: '#635bff';
-}
-
-.view-more-button {
-  background-color: #008CBA; /* Blue */
-  border: none;
-  color: white;
-  padding: 10px 24px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.card-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-.course {
-  overflow: hidden;
-  position: relative;
-  transition: box-shadow 0.3s ease;
-  border: 1px solid rgb(217, 217, 217);
-  border-radius: 15px;
-  background-color: white;
-}
-
-
-
-.course.hovered {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  border: 1px solid white;
-}
-
-.course-img {
-  width: 100%;
-  height: auto;
+pre.html {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid #f36d33;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.course.hovered .course-img {
-  transform: translateY(-10%);
-}
-
-.content {
-  padding: 20px;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.course.hovered .content {
-  transform: translateY(-10%);
-}
-
-.course-description {
-  padding-top: 10px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #635bff;
-  font-size: 20px;
-}
-
-.course-link {
-  font-weight: 600;
-  color: #635bff;
-  font-size: 18px;
-  margin-bottom: 0px;
-  opacity: 0;
-  transform: translateY(0px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  bottom: 0;
-  left: 20px;
-}
-
-.course.hovered .course-link {
-  opacity: 1;
-}
-
-.course-title {
-  font-size: 25px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.two-sections {
-  flex-direction: row;
-}
-
-h2 {
-  letter-spacing: -0.05em;
-}
-
-h1 {
-  letter-spacing: -0.05em;
-}
-
-.divider {
-  border-Top: '0.5px solid #D3D3D3';
-  margin-Bottom: '20px';
-}
-
-/* FilterSidebar.css */
-.sidebar {
-  width: 180px;
-  padding: 10px;
-  border: 1px solid #e2e2e2;
-  border-radius: 10px;
+  word-wrap: break-word;
 }
 
 
-
-
-
-
-
-.container {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 0 auto;
-  color: black;
-  font-family: 'SF Pro Display', sans-serif;   
-}
-
-.container h1 {
-  text-align: center;
-}
-
-h1 {
-  font-weight: 900;
-  font-size: 35px;
-}
-
-.icon-row {
-  display: flex;
-  justify-content: space-around;
+.navbar-content {
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
   align-items: center;
-}
-
-.icon-description {
-  text-align: center;
-  padding: 10px;
-}
-
-.footer {
-  background-color: #f6f9fc;
-  padding: 50px 0;
-  font-size: 14px;
-}
-
-.footer-container {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-section {
-  flex: 1;
-  padding: 0 20px;
-}
-
-.footer-section h5 {
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li a {
-  color: #333;
-  text-decoration: none;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.footer-section ul li a:hover {
-  text-decoration: underline;
+  
+  padding: 0 10px;
 }
 
 
-/* Add any other specific styles for individual sections if needed */
-
-
-
-
-@media screen and (max-width: 1000px) {
-  .content-container {
-      flex-direction: column;
-      font-size: 20px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-  .two-sections {
-    flex-direction: column;
-  }
-
-  .text-button-container, .card-container {
-      margin-right: 0;
-      margin-bottom: 10px;
-      flex: 100%;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .course-info {
-    flex-direction: column;
-    display: flex;
-    flex-Direction: column;
-  }
-
-  .courses-rows {
-    justify-content: center;
+  to {
+    opacity: 1;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   .navbar {
       flex-direction: row;
   }
 
-  .search-container, .menu-button {
-      width: 100%;
-      margin-top: 1em;
-  }
-
-  .card-container-trending {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .card-container-trending .card {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .header-container {
-    flex-wrap: wrap;
-  }
-
-  .body {
-    margin-right: 0px;
-  }
 
   
 }
-
-@media screen and (min-width: 600px) {
-  .menu-toggle, .search-toggle {
-      display: none;
-  }
-  
-  .search-container {
-      display: block;
-  }
-
-  .menu {
-      display: flex;
-  }
-}
-

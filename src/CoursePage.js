@@ -109,7 +109,6 @@ function CoursePage() {
   return (
     <div>
       <FadeInWrapper>
-        <Home />
         <CourseImage 
           text="All the latest and important information"
           bgColor="#635bff"

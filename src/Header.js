@@ -8,7 +8,7 @@ import Label from './Label';
 
 function ContentComponent() {
     return (
-        <div className="content-container" style={{marginTop: 100,}}>
+        <div className="content-container">
             <div className="text-button-container">
                 <h1 className="header">BENIFITS</h1>
                 <h1 style={{ fontSize: 65, marginTop: 0, letterSpacing: '-0.05em' }}>

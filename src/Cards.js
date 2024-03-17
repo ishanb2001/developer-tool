@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';  // Make sure your CSS with the above styles is here
+import './App.css';  
 import VideoComponent from './VideoComponent';
 
 function Cards({ index = 0, bgColor, borderStyle, textColor, fontSize, backgroundImage, children, videoUrl }) {
@@ -13,7 +13,7 @@ function Cards({ index = 0, bgColor, borderStyle, textColor, fontSize, backgroun
     let backgroundStyle = {};
     if (videoUrl) {
         backgroundStyle = {
-            background: 'transparent', // Reset the background if it's a video
+            background: 'transparent', 
         };
     } else if (backgroundImage) {
         backgroundStyle = {
@@ -28,12 +28,14 @@ function Cards({ index = 0, bgColor, borderStyle, textColor, fontSize, backgroun
         position: 'relative',
         padding: 30,
         borderRadius: 20,
+        width: '100%',
         backgroundColor: bgColor,
         color: textColor,
         fontSize: fontSize,
         border: borderStyle,
         ...backgroundStyle,
         animationDelay: `${index * 0.5}s`,
+        margin: 10
     };
 
     return (

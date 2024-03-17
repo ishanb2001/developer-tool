@@ -1,8 +1,9 @@
-// SideNavBar.js
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from './logo-ishan.png';
 import Styling from "./Styling";
+
+
 
 const SideNavBar = () => {
   return (
@@ -20,9 +21,9 @@ const SideNavBar = () => {
       <ul>
         
         <li><NavLink to="/Intro" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>
-        <li><NavLink to="/Styling" className={({ isActive }) => isActive ? "active-link" : ""}>Styling</NavLink></li>
+        <li><NavLink to="/Styling" className={({ isActive }) => isActive ? "active-link" : ""}>Cards</NavLink></li>
 
-        <li><NavLink to="/signin" className={({ isActive }) => isActive ? "active-link" : ""}>Navigation</NavLink></li>
+        <li><NavLink to="/NavigationSnippet" className={({ isActive }) => isActive ? "active-link" : ""}>Navigation</NavLink></li>
         <li><NavLink to="/signup" className={({ isActive }) => isActive ? "active-link" : ""}>Sign Up</NavLink></li>
         <li><NavLink to="/cart" className={({ isActive }) => isActive ? "active-link" : ""}>Cart</NavLink></li>
         <li><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>

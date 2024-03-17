@@ -10,7 +10,7 @@ const Label = ({ title, description, image, buttonText, buttonBgColor, buttonTex
     border: 'none',
     borderRadius: '50px',
     cursor: 'pointer',
-    marginBottom: '10px',  // Space between button and title
+    marginBottom: '30px',  // Space between button and title
     fontSize: '0.8rem',
     fontWeight: 800
   };

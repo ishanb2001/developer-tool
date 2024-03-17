@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Manrope';
+  font-family: 'Inter';
 }
 
 
@@ -34,18 +34,19 @@ body, html {
   background-color: black;
   color: white;
   font-family: 'Manrope';
+  
 }
 
 
 .App {
   display: flex;
   min-height: 100vh; 
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto; 
 }
 
 .left-sidebar {
-  width: 300px; 
+  width: 250px; 
   height: 100vh;
   overflow-y: auto; 
   position: sticky;
@@ -69,23 +70,37 @@ body, html {
 }
 
 .body {
- color: grey;
- line-height: 28px;
+ line-height: 1.4;
  font-family: 'Manrope';
  font-weight: 500;
+ margin-bottom: 30px;
 }
 
 h1 {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 50px;
   letter-spacing: -0.05em;
-  margin-bottom: 20px;
+}
+
+.cards-home {
+  display: block;
+}
+
+.banner-text {
+  font-size: 45px;
+}
+
+.body-copy {
+ color: grey;
+ font-size: 20px;
+ font-weight: 500;
+ padding-top: 30px;
 }
 
 h2 {
   margin-top: 40px;
-  margin-bottom: 20px;
-  font-weight: 800;
+  margin-bottom: 10px;
+  font-weight: 600;
   letter-spacing: -0.05em;
 }
 
@@ -112,6 +127,7 @@ h2 {
   transition: background-color 0.3s ease; 
   border-radius: 70px;
   font-weight: 600;
+  font-size: 0.875rem;
 }
 
 .sidebar-subheader {
@@ -121,20 +137,20 @@ h2 {
   padding: 10px 20px;
   margin-bottom: 15px;
   transition: background-color 0.3s ease; 
-  border-radius: 70px;
+  border-radius: 0px;
   font-weight: 900;
 }
 
 .side-navbar ul li a:hover, .side-navbar ul li a.active-link {
-  background-color: #292929; 
+  background-color: #0d0d0d; 
   color: rgb(190, 190, 190); 
-  border-radius: 70px;
+  border-radius: 7px;
 }
 
 .side-navbar ul li a:focus, .side-navbar ul li a.active-link {
-  background-color: #292929; 
+  background-color: #1a1a1a; 
   color: rgb(255, 255, 255); 
-  border-radius: 70px;
+  border-radius: 7px;
 }
 
 
@@ -163,25 +179,10 @@ h2 {
  display: flex;
  justify-content: space-between;
  padding-left: 40px;
- padding-right: 40px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1em 2em;
-  background-color: #161618; 
-  margin-bottom: 10px;
-  position: fixed;  
-    top: 0;           
-    left: 0;          
-    right: 0;         
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    z-index: 1000;
-    width: 100%; 
-    
+ border-bottom: 1px solid rgb(46, 46, 46);
+ height: 71px;
+ position: sticky;
+ background-color: black;
 }
 
 
@@ -214,7 +215,7 @@ h2 {
 
 .nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   height: 60px;
   width: 100%; 
@@ -253,6 +254,78 @@ pre.html {
   padding: 0 10px;
 }
 
+.navbar {
+  display: flex;
+  background: black; 
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-button {
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 0 20px; 
+  height: 56px; 
+  line-height: 56px; 
+  font-size: 16px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1; 
+  background-color: black;
+}
+
+.nav-button-2 {
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 0 20px; 
+  height: 56px; 
+  font-size: 16px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1; 
+  background-color: black;
+}
+
+.nav-button-3 {
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 0 20px; 
+  height: 56px; 
+  line-height: 56px; 
+  font-size: 16px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1; 
+  background-color: black;
+}
+
+.nav-button:hover {
+  border-bottom: 1px solid white;
+}
+
+.nav-button-2:hover {
+  border-bottom: 1px solid white;
+}
+
+.nav-button-3:hover {
+  border-bottom: 1px solid white;
+}
+
+.nav-button:focus {
+  outline: none;
+}
+
+svg {
+  z-index: 0; 
+}
+
+
+
+
+
 
 @keyframes fadeIn {
   from {
@@ -271,3 +344,4 @@ pre.html {
 
   
 }
+

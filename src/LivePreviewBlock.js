@@ -10,7 +10,7 @@ const LivePreviewBlock = ({ htmlCode, cssCode }) => {
     border: '1px solid #292929',
     borderRadius: '50px',
     cursor: 'pointer',
-    marginBottom: '10px', // Space between button and title
+    marginBottom: '10px', 
     fontSize: '15px',
     fontWeight: 800,
     width: '100%',

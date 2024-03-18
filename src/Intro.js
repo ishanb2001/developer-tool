@@ -36,6 +36,8 @@ const Intro = () => {
                 
             </div>
             <div style={{display: 'flex', alignItems: 'center'}}>
+
+                
             <Cards index={0}
                 
                 borderStyle='1px solid black'
@@ -50,7 +52,8 @@ const Intro = () => {
                 
                 <h1 style={{fontSize: 30, fontWeight: 600}}>Creative power that goes beyond templates</h1>
             </Cards>
-
+            
+            
             <Cards index={0}
                 
                 borderStyle='1px solid rgb(46, 46, 46)'
@@ -64,8 +67,8 @@ const Intro = () => {
                 <h1 style={{fontSize: 30, fontWeight: 600}}>Creative power that goes beyond templates</h1>
             </Cards>
 
-            </div>
             
+            </div>
       </div>
   );
 };

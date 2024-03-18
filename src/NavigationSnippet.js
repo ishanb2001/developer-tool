@@ -76,9 +76,9 @@ const NavigationSnippet = () => {
 
 const htmlCodeSnippet2 = `<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="transparent">
 <tr>
-    <td align="center" style="padding: 10px;">
+    <td align="center" style=";">
         <!-- Wrapper table for content -->
-        <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="white" style="max-width: 600px; background-color: black; text-align: center;">
+        <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="white" style="max-width: 600px; background-color: white; text-align: center;">
             <tr>
                 <!-- Card 1 Container -->
                 <td class="card-container" valign="top" style="padding: 10px; background-color: white;">
@@ -101,9 +101,9 @@ const htmlCodeSnippet2 = `<table width="100%" border="0" cellspacing="0" cellpad
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="transparent">
 <tr>
-    <td align="center" style="padding: 10px;">
+    <td align="center" style="">
         <!-- Wrapper table for content -->
-        <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="white" style="max-width: 600px; background-color: black;">
+        <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="white" style="max-width: 600px; background-color: white;">
             <tr>
                 <!-- Card 1 Container -->
                 

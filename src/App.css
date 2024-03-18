@@ -336,9 +336,35 @@ svg {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .navbar {
       flex-direction: row;
+  }
+
+  .side-navbar {
+    
+    display: none;
+  }
+
+  .left-sidebar {
+    width: 0px;
+    display: none;
+  }
+
+  .course-page-content {
+    margin: 0px;
+  }
+
+  .main-content {
+    max-width: 1500px;
+  }
+
+  .banner-text {
+    font-size: 30px;
+  }
+
+  .navbar-content-wrapper {
+    padding-left: 0px;
   }
 
 

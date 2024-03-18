@@ -24,8 +24,8 @@ const SideNavBar = () => {
         <li><NavLink to="/Styling" className={({ isActive }) => isActive ? "active-link" : ""}>Cards</NavLink></li>
 
         <li><NavLink to="/NavigationSnippet" className={({ isActive }) => isActive ? "active-link" : ""}>Navigation</NavLink></li>
-        <li><NavLink to="/signup" className={({ isActive }) => isActive ? "active-link" : ""}>Sign Up</NavLink></li>
-        <li><NavLink to="/cart" className={({ isActive }) => isActive ? "active-link" : ""}>Cart</NavLink></li>
+        <li><NavLink to="/signup" className={({ isActive }) => isActive ? "active-link" : ""}>Importing Fonts</NavLink></li>
+        <li><NavLink to="/cart" className={({ isActive }) => isActive ? "active-link" : ""}>How To Send</NavLink></li>
         <li><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>
         <li><NavLink to="/signin" className={({ isActive }) => isActive ? "active-link" : ""}>Navigation</NavLink></li>
         <li><NavLink to="/signup" className={({ isActive }) => isActive ? "active-link" : ""}>Sign Up</NavLink></li>

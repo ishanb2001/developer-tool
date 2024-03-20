@@ -56,21 +56,12 @@ function Home() {
     return (
         <nav className="navbar">
             <div className="navbar-content">
-                <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
+                
                 <img src={Logo} style={{ width: 210, paddingRight: 30 }} alt="Logo" />
 
-                <div className="categories-container" 
-                     onMouseEnter={() => setDropdownOpen(true)} 
-                     onMouseLeave={() => setDropdownOpen(false)}>
-                    <button className="menu-button">Categories</button>
-                    <div className={`dropdown ${dropdownOpen ? 'open' : ''}`}>
-                        <button className="menu-button">Option 1</button>
-                        <button className="menu-button">Option 2</button>
-                        <button className="menu-button">Option 3</button>
-                    </div>
-                </div>
+                
 
-                <div className="right-container">
+                <div className="right-container" style={{display: 'flex'}}>
                     <div className={`search-container ${searchOpen ? 'open' : ''}`}>
                         <input 
                             type="text" 
@@ -105,6 +96,7 @@ function Home() {
                 <div className="user-dropdown">
                     <button onClick={() => navigate('/my-portal')}>My Portal</button>
                     <button onClick={handleSignOut}>Sign Out</button>
+                    <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
                 </div>
             )}
         </div>

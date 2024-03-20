@@ -12,7 +12,7 @@ const Label = ({ title, description, image, buttonText, buttonBgColor, buttonTex
     cursor: 'pointer',
     marginBottom: '30px',  // Space between button and title
     fontSize: '0.8rem',
-    fontWeight: 800
+    fontWeight: 600
   };
 
   return (

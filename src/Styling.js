@@ -1,5 +1,6 @@
 import React from 'react';
 import LivePreviewBlock from './LivePreviewBlock';
+import SideNavBar from './SideNavBar';
 
 const Styling = () => {
   const htmlCodeSnippet = `<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="transparent">
@@ -104,12 +105,15 @@ const cssCodeSnippet2 = `td.card-container, td.spacer {
   }
 }`;
 
-  return (
-    <div className='course-page-content'>
-      <h1>Code Blocks</h1>
-      <LivePreviewBlock htmlCode={htmlCodeSnippet} cssCode={cssCodeSnippet} />
+return (
+    <div className='course-page-content' style={{display: 'flex', flexWrap: 'wrap', gap: '20px'}}>
+        <div style={{flexGrow: 1, flexBasis: '75%', maxWidth: '100%'}}>
+          
+          <LivePreviewBlock htmlCode={htmlCodeSnippet} cssCode={cssCodeSnippet} />
+          <LivePreviewBlock htmlCode={htmlCodeSnippet2} cssCode={cssCodeSnippet2} />
+        </div>
 
-      <LivePreviewBlock htmlCode={htmlCodeSnippet2} cssCode={cssCodeSnippet2} />
+        
     </div>
   );
 };

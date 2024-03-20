@@ -20,7 +20,7 @@ const Intro = () => {
                     textColor="white" 
                     fontSize="15px"
 >
-                    <Label buttonBgColor="#262626" buttonText="EXPLORE NOW"/>
+                    <Label buttonBgColor="#C1FF6C" buttonTextColor="black" buttonText="EXPLORE NOW"/>
                 
                     <div style={{display: 'flex'}}>
   <div>
@@ -29,7 +29,7 @@ const Intro = () => {
 
 </p>
     </div>
-  <h1 style={{flexGrow: 2, color: '#c1ff6c'}}> &lt;/&gt;</h1>
+  
 </div>
 
                 </Cards>

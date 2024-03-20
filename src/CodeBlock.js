@@ -20,8 +20,8 @@ const CodeBlock = ({ code, language }) => {
       <style>
         {`
           pre.rounded {
-            background-color: #0a0a0a; /* Solid black background */
-            border: 1px solid hsl(0deg 0% 100% / 14%); /* 1px grey border */
+            background-color: #101112; /* Solid black background */
+            border: none; /* 1px grey border */
             color: #f8f8f2; /* Light grey text color for readability */
             overflow: auto; /* Allow scrolling if necessary */
             white-space: pre-wrap; /* Wrap the text inside the container */

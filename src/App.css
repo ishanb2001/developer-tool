@@ -41,9 +41,11 @@ body, html {
 .App {
   display: flex;
   min-height: 100vh; 
-  max-width: 1400px;
+  max-width: 1300px;
   margin: auto; 
+  border: 1px solid rgb(46, 46, 50);
 }
+
 
 .left-sidebar {
   width: 250px; 
@@ -51,12 +53,28 @@ body, html {
   overflow-y: auto; 
   position: sticky;
   top: 0;
-  
+  border: 1px solid rgb(46, 46, 50);
   
 }
 
+
+.left-sidebar {
+  position: sticky;
+  top: 54px; 
+  height: calc(100vh - 60px); 
+  overflow-y: auto;
+  padding-top: 30px;
+}
+
+.main-content {
+  overflow-y: auto;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
 .course-page-content {
-  margin: 30px;
   margin-right: 0px;
 }
 
@@ -87,7 +105,7 @@ h1 {
 }
 
 .banner-text {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .body-copy {
@@ -107,15 +125,13 @@ h2 {
 
 .main-content {
   flex-grow: 1; 
-  max-width: calc(100% - 300px); 
+  max-width: 1045px;
   overflow-x: hidden; 
   
 }
 
-
 .side-navbar ul {
   list-style-type: none;
-  padding: 20px 0;
 }
 
 .side-navbar ul li a {
@@ -201,15 +217,28 @@ h2 {
 }
 
 
-.navbar-content {
-  max-width: 1300px;  
-  display: flex;      
-  margin: auto;
+.navbar-content { 
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 1300px; 
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2e2e32;
+  background-color: black;
+  padding: 10px 20px; 
+  border: 1px solid rgb(46, 46, 50);
 }
+
 
 .navbar {
   width: 100%;
+  z-index: 1000; 
+  border-radius: 100px;
   
 }
 
@@ -217,7 +246,7 @@ h2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 60px;
+  height: 54px;
   width: 100%; 
   position: fixed;
   top: 0;
@@ -245,14 +274,7 @@ pre.html {
 }
 
 
-.navbar-content {
-  width: 100%; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center;
-  
-  padding: 0 10px;
-}
+
 
 .navbar {
   display: flex;
@@ -327,12 +349,21 @@ svg {
 
 
 
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .left-sidebar {
+    width: 800px;
   }
 }
 
@@ -359,6 +390,18 @@ svg {
     max-width: 1500px;
   }
 
+  .right-container {
+   display: none;
+  }
+
+  .menu {
+    display: none;
+   }
+
+   .search-input {
+    display: none;
+   }
+
   .banner-text {
     font-size: 30px;
   }
@@ -367,7 +410,12 @@ svg {
     padding-left: 0px;
   }
 
+  .banner-icon {
+    display: none;
+  }
+
 
   
 }
+
 

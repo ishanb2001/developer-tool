@@ -7,13 +7,13 @@ const LivePreviewBlock = ({ htmlCode, cssCode }) => {
 
   const LabelStyle = {
     padding: '5px 10px',
-    border: '1px solid #292929',
+    border: 'none',
     borderRadius: '50px',
     cursor: 'pointer',
     marginBottom: '10px', 
     fontSize: '15px',
-    fontWeight: 800,
-    width: '100%',
+    fontWeight: 600,
+    
     backgroundColor: 'black',
     color: 'white',
   };
@@ -73,7 +73,7 @@ const LivePreviewBlock = ({ htmlCode, cssCode }) => {
           srcDoc={fullHtml}
           title="Preview"
           onLoad={adjustIframeHeight}
-          style={{ width: '100%', border: '1px solid rgb(41, 41, 41)', borderRadius: '20px' }}
+          style={{ width: '100%', border: '1px solid rgb(41, 41, 41)', borderRadius: '20px', backgroundColor:'#0f0f0f' }}
         />
       </div>
       <button style={LabelStyle} onClick={toggleCodeVisibility}>

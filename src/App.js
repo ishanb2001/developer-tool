@@ -40,8 +40,9 @@ function App() {
   return (
     <CartProvider>
       <Router>
-        
+      <Home/>
         <div className="App">
+        
       
           
           <div className="left-sidebar">
@@ -53,19 +54,9 @@ function App() {
               </Section>
             </FadeInWrapper>
           </div>
+          
           <div className="main-content">
-          <div style={{position: 'sticky',top: '0px', zIndex: 100}}>
-            
-  <div className="navbar-content-wrapper">
-  <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-      <div className='column1'>
-        <Navbar />
-      </div>
-
-    </div>
-  
-    </div>
-</div>
+          
 
             
             <Routes>
@@ -81,8 +72,9 @@ function App() {
             
 
 
-
+    
           </div>
+          
           
         </div>
       </Router>
